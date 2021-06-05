@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+/*Custom Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*Scroll Bar End*/
+
+.nav {
+  height: 20vh;
+  background: #141f26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-center {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #62abd9;
+  text-align: center;
+}
+.logo img {
+  width: 120px;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #a0ccf2;
+  font-size: 35px;
+  font-family: "Lobster", cursive;
+}
+
+.body {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  width: 95%;
+  height: 90%;
+  background: rgba(20, 31, 38, 0.8);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.char_area {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.char_area input[type="checkbox"] {
+  display: none;
+}
+.card {
+  width: 18rem;
+  height: 400px;
+  background-color: #141f26;
+  color: #c7e2fc;
+  border: 2px solid #000;
+}
+
+.card .card-img {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-img img {
+  width: 400px;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav {
+    height: 10vh;
+  }
+  .logo img {
+    width: 60px;
+  }
+
+  h3 a {
+    color: #a0ccf2;
+    font-size: 20px;
+  }
+
+  .body {
+    height: 90vh;
+  }
+}
+
+/*Board.html*/
+
+.body_board {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.tiles_area {
+  height: 500px;
+  width: 710px;
+  background: rgba(20, 31, 38, 0.8);
+  /*position: absolute;*/
+  /*left: 0;*/
+  margin-left: 30px;
+  border: 5px solid #fff;
+  /*overflow: hidden;*/
+  position: relative;
+}
+.tile {
+  height: 70px;
+  width: 70px;
+  background-color: #62abd9;
+  border: 2px solid #fff;
+  /*animation: roll 1s linear;*/
+}
+
+.top_tiles {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  right: 70px;
+}
+
+.bottom_tiles {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 70px;
+  left: 70px;
+}
+
+.right_tiles {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.player_area {
+  height: 70vh;
+  width: 300px;
+  margin: 20px;
+  background-color: rgba(98, 171, 217, 0.8);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player_area h1 {
+  font-weight: bold;
+  color: #000;
+}
+
+.roll_button {
+  background-color: #fff;
+  transition: all 0.3s;
+  width: 150px;
+  font-size: 25px;
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.roll_button:hover {
+  background-color: #b6f2ec;
+}
+
+.bottom_tiles {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.left_tiles {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .body_board{
+    height: 90vh;
+    flex-direction: column;
+  }
+  .tiles_area{
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+
+.tile {
+  height: 45px;
+  width: 45px;
+  background-color: #62abd9;
+  border: 2px solid #fff;
+  /*animation: roll 1s linear;*/
+}
+
+.top_tiles {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 45px;
+  right: 45px;
+}
+
+.bottom_tiles {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 45px;
+  left: 45px;
+}
+
+.right_tiles {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#gmOver{
+  font-size: 10px;
+}
+
+.player_area {
+  height: 30vh;
+  width: 100%;
+}
+.roll_button {
+  background-color: #fff;
+  transition: all 0.3s;
+  width: 150px;
+  font-size: 25px;
+  position: relative;
+  bottom: 10px;
+}
+
+}
